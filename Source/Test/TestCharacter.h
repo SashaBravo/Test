@@ -31,6 +31,8 @@ public:
 	float BaseLookUpRate;
 
 
+	//Montages
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations)
 		UAnimMontage* M_punch;
 
@@ -43,6 +45,7 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 		bool getting;
 
+	//Colisiones
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 		class UCapsuleComponent* Cap;
@@ -57,7 +60,7 @@ public:
 
 	virtual void BeginPlay() override;
 
-
+	//Multiplayer
 
 	UFUNCTION(Server, Reliable)
 		void Serv();
@@ -80,6 +83,7 @@ protected:
 	void TouchStopped(ETouchIndex::Type FingerIndex, FVector Location);
 
 
+	// Funcion Daño
 
 	void Punch();
 

@@ -113,12 +113,12 @@ void ATestCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor*
 
 	if (!punching && OtherPlayer)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Blue, "Colision");
-		//PlayAnimMontage(M_hit, 5, NAME_None);
+		//GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Blue, "Chocar");
+
 	}
 	else if (M_punch)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Blue, "COLI");
+		//GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Blue, "Golpe");
 		OtherPlayer->PlayAnimMontage(M_hit, 5, NAME_None);
 	}
 }
@@ -126,7 +126,7 @@ void ATestCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor*
 void ATestCharacter::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
 	ATestCharacter* OtherPlayer = Cast<ATestCharacter>(OtherActor);
-	GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Blue, "salir");
+	//GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Blue, "salir");
 	if (OtherPlayer)
 	{
 		punching = false;
